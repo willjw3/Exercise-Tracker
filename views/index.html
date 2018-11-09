@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Exercise Tracker | Free Code Camp</title>
+      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+     <h1>Exercise Tracker</h1>
+      <div class="container">
+         <div id="left-box">
+           <p><strong>User's exercise log: <br></strong><code>&lt;above URL&gt;/api/exercise/user/&#123;userId&#125;/date1/&lt;from&gt;/date2/&lt;to&gt;/limit/&lt;number&gt;</code></p>
+           <p><strong>{ }</strong> = required, <strong>< ></strong> = optional</p>
+           <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+           <p><strong>Example: </strong><code>&lt;above URL&gt;/api/exercise/user/5be3f498ed070b2ddca768b0/date1/2017-12-23/date2/2018-11-09/limit/2</code></p>
+         </div>
+         <div id="right-box">
+          <form action="/api/exercise/new-user" method="post">
+            <h3>Create a New User</h3>
+            <p><code>POST /api/exercise/new-user</code></p>
+            <input id="uname" type="text" name="username" placeholder="username">
+            <input type="submit" value="Submit">
+          </form>
+          <form action="/api/exercise/add" method="post">
+            <h3>Add exercises</h3>
+            <p><code>POST /api/exercise/add</code></p>
+            <input id="uid" type="text" name="userId" placeholder="userId*">
+            <input id="desc" type="text" name="description" placeholder="description*">
+            <input id="dur" type="text" name="duration" placeholder="duration* (mins.)">
+            <input id="dat" type="text" name="date" placeholder="date (yyyy-mm-dd)">
+            <input type="submit" value="Submit">
+          </form>
+          </div>
+
+      </div>
+   </body>
+
+</html>
+
